@@ -1,0 +1,260 @@
+/* Reset CSS básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Barra de navegação */
+.navBar {
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 18px;
+    margin-left: 20px;
+    color: black;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid black;
+}
+
+.searchBar {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #f9f9f9;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Cards de Livros */
+.livros {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.livro-card {
+    background-color: #fff;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.livro-card:hover {
+    transform: translateY(-5px);
+}
+
+.livro-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.livro-titulo {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.livro-preco {
+    font-size: 16px;
+    color: #666;
+}
+
+.btn-comprar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #333;
+}
+
+/* Formulários */
+.formUser {
+    background-color: #fff;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inputCampos {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputUser {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.inputUser:focus {
+    border-color: black;
+}
+
+.labelUser {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #666;
+    pointer-events: none;
+    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+}
+
+.inputUser:focus ~ .labelUser,
+.inputUser:valid ~ .labelUser {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+.btnEnviar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnEnviar:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para a página do livro */
+
+.livro {
+    padding: 50px;
+}
+
+.livro-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.livro-titulo {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.livro-img {
+    width: 200px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.livro-sinopse {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.livro-preco {
+    font-size: 20px;
+    color: #666;
+}
+
+.btn-comprar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #333;
+}
