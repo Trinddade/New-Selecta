@@ -9,7 +9,7 @@
 body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 
 /* Barra de navegação */
 .navBar {
-    background-color: #fff;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -61,19 +60,28 @@ a {
 }
 
 /* Cabeçalho */
-.header {
-    background-color: #f9f9f9;
-    height: 400px;
+.headerIndex {
+    height: 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
-.header h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.titleHeader{
+    width: 420px;
+    margin-left: 90px;
 }
+
+.titleHeader h1{
+    font-size: 35px;
+}
+
+.titleHeader p{
+    font-size: 16.8px;
+    margin-top: 10px;
+
+}
+
 
 /* Cards de Livros */
 .livros {
@@ -170,23 +178,6 @@ legend {
 
 .inputUser:focus {
     border-color: black;
-}
-
-.labelUser {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #666;
-    pointer-events: none;
-    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
-}
-
-.inputUser:focus ~ .labelUser,
-.inputUser:valid ~ .labelUser {
-    top: -10px;
-    left: 5px;
-    font-size: 12px;
-    color: black;
 }
 
 .btnEnviar {
