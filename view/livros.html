@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Livros - Livraria Selecta</title>
+    <title>Livraria Selecta - Livros</title>
 </head>
 <body>
     <nav class="navBar">
@@ -16,45 +16,56 @@
             <a href="" class="links">Carrinho</a>
             <a href="sobre.html" class="links">Sobre</a>
             <a href="login.html" class="links">Login</a>
-            <input type="text" placeholder="Pesquisa" class="searchBar">
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar" onkeyup="searchBooks()">
         </div>
     </nav>
 
-    <section class="livros">
-        <div class="livro-card">
-            <img src="img/livro1.jpg" alt="Livro 1">
+    <section class="livros" id="livrosSection">
+        <a href="livros1.html" class="livro-card" data-title="Memórias póstumas de Brás Cubas">
+            <img src="img/livro1.jpg" alt="Memórias póstumas de Brás Cubas">
             <h3 class="livro-titulo">Memórias póstumas de Brás Cubas</h3>
             <p class="livro-preco">R$ 29,90</p>
-            <a href="livro1.html" class="btn-comprar">Comprar</a>
-        </div>
-        <div class="livro-card">
-            <img src="img/livro2.jpg" alt="Livro 2">
+        </a>
+        <a href="livro2.html" class="livro-card" data-title="O Cortiço">
+            <img src="img/livro2.jpg" alt="O Cortiço">
             <h3 class="livro-titulo">O Cortiço</h3>
             <p class="livro-preco">R$ 24,99</p>
-            <a href="livro2.html" class="btn-comprar">Comprar</a>
-        </div>
-        <div class="livro-card">
-            <img src="img/livro3.jpg" alt="Livro 3">
+        </a>
+        <a href="livro3.html" class="livro-card" data-title="Dom Casmurro">
+            <img src="img/livro3.jpg" alt="Dom Casmurro">
             <h3 class="livro-titulo">Dom Casmurro</h3>
             <p class="livro-preco">R$ 19,99</p>
-            <a href="livro3.html" class="btn-comprar">Comprar</a>
-        </div>
-        <div class="livro-card">
-            <img src="img/livro4.jpg" alt="Livro 4">
+        </a>
+        <a href="livro4.html" class="livro-card" data-title="Campo Geral">
+            <img src="img/livro4.jpg" alt="Campo Geral">
             <h3 class="livro-titulo">Campo Geral</h3>
             <p class="livro-preco">R$ 34,50</p>
-            <a href="livro4.html" class="btn-comprar">Comprar</a>
-        </div>
-        <div class="livro-card">
-            <img src="img/livro5.jpg" alt="Livro 5">
+        </a>
+        <a href="livro5.html" class="livro-card" data-title="Terra sonâmbula">
+            <img src="img/livro5.jpg" alt="Terra sonâmbula">
             <h3 class="livro-titulo">Terra sonâmbula</h3>
             <p class="livro-preco">R$ 27,80</p>
-            <a href="livro5.html" class="btn-comprar">Comprar</a>
-        </div>
+        </a>
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function searchBooks() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.querySelectorAll('.livro-card');
+            
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
