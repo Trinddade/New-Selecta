@@ -28,6 +28,11 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navBar a {
+    color: black;
+    text-decoration: none;
+}
+
 .logo {
     font-family: "Dancing Script", cursive;
     font-size: 30px;
@@ -41,7 +46,6 @@ a {
 .menu a {
     font-size: 18px;
     margin-left: 20px;
-    color: black;
     transition: border-bottom 0.3s ease;
 }
 
@@ -74,10 +78,10 @@ a {
 /* Cards de Livros */
 .livros {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 20px 50px; /* Combinação das duas definições anteriores */
 }
 
 .livro-card {
@@ -88,11 +92,14 @@ a {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: black;
 }
 
 .livro-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .livro-card img {
@@ -111,7 +118,7 @@ a {
     color: #666;
 }
 
-.btn-comprar {
+.btn-comprar, .livro-card button {
     background-color: black;
     color: white;
     border: none;
@@ -122,7 +129,7 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.btn-comprar:hover {
+.btn-comprar:hover, .livro-card button:hover {
     background-color: #333;
 }
 
@@ -197,6 +204,47 @@ legend {
     color: #fff;
 }
 
+/* Carrinho */
+.carrinho {
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.cart-item h4 {
+    margin: 0 0 10px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.cart-item input {
+    width: 50px;
+    text-align: center;
+}
+
+.cart-item button {
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #c00;
+}
+
 /* Rodapé */
 .footer {
     background-color: #333;
@@ -209,7 +257,6 @@ legend {
 }
 
 /* Estilos específicos para a página do livro */
-
 .livro {
     padding: 50px;
 }
@@ -222,83 +269,25 @@ legend {
     text-align: center;
 }
 
-.livro-titulo {
+.livro-details .livro-titulo {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-.livro-img {
+.livro-details .livro-img {
     width: 200px;
     border-radius: 8px;
     margin: 20px 0;
 }
 
-.livro-sinopse {
+.livro-details .livro-sinopse {
     font-size: 18px;
     line-height: 1.6;
     text-align: left;
     margin-bottom: 20px;
 }
 
-.livro-preco {
+.livro-details .livro-preco {
     font-size: 20px;
-    color: #666;
-}
-
-.btn-comprar {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-comprar:hover {
-    background-color: #333;
-}
-
-/* Estilos específicos para os cards de livros com links */
-
-.livros {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 50px;
-}
-
-.livro-card {
-    background-color: #fff;
-    width: 250px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: black;
-}
-
-.livro-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.livro-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.livro-titulo {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.livro-preco {
-    font-size: 16px;
     color: #666;
 }
