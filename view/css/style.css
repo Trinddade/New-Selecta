@@ -18,6 +18,8 @@ a {
 }
 
 /* Barra de navegação */
+
+
 .navBar {
     height: 80px;
     display: flex;
@@ -25,6 +27,9 @@ a {
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garante que fique acima do carrossel */
+    position: relative;
+    background-color: #fff;
 }
 
 .navBar a {
@@ -62,28 +67,68 @@ a {
 /* Cabeçalho */
 .headerIndex {
     height: 600px;
+    width: 100%;
     display: flex;
     align-items: center;
-    text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
-.titleHeader{
-    width: 420px;
-    margin-left: 90px;
+.titleHeader {
+    width: 620px;
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    position: absolute;
+    z-index: 10;
+    color: black;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: -80px;
 }
 
-.titleHeader h1{
+.titleHeader h1 {
     font-size: 35px;
 }
 
-.titleHeader p{
-    font-size: 16.8px;
+.titleHeader p {
+    font-size: 17px;
     margin-top: 10px;
+}
 
+/* Carrossel */
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
 
 /* Cards de Livros */
+.cards{
+    margin-top: 40px;
+}
+
+.cards h1{
+    text-align: center;
+}
+
 .livros {
     display: flex;
     justify-content: center;
@@ -195,6 +240,11 @@ legend {
     color: #fff;
 }
 
+.formUser a{
+    color: blue;
+    border-bottom: 1px solid blue;
+}
+
 /* Carrinho */
 .carrinho {
     padding: 20px;
@@ -281,4 +331,22 @@ legend {
 .livro-details .livro-preco {
     font-size: 20px;
     color: #666;
+}
+
+/* rodapé do index  */
+.footerIndex{
+    height: 300px;
+    background-color: #333;
+    display: flex;
+}
+
+.contato {
+    color: #fff;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.contato a{
+    color: rgb(59, 59, 252);
+    border-bottom: 1px solid rgb(59, 59, 252);
 }
