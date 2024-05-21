@@ -291,3 +291,115 @@ legend {
     font-size: 20px;
     color: #666;
 }
+
+/* Reset CSS básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Barra de navegação */
+.navBar {
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 18px;
+    margin-left: 20px;
+    color: black;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid black;
+}
+
+.searchBar {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sobre li strong {
+    display: inline-block;
+    width: 100px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
