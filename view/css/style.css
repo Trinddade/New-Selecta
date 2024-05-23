@@ -9,7 +9,7 @@
 body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 a {
@@ -18,14 +18,18 @@ a {
 }
 
 /* Barra de navegação */
+
+
 .navBar {
-    background-color: #fff;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garante que fique acima do carrossel */
+    position: relative;
+    background-color: #fff;
 }
 
 .navBar a {
@@ -61,21 +65,70 @@ a {
 }
 
 /* Cabeçalho */
-.header {
-    background-color: #f9f9f9;
-    height: 400px;
+.headerIndex {
+    height: 600px;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.titleHeader {
+    width: 620px;
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    position: absolute;
+    z-index: 10;
+    color: black;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: -80px;
+}
+
+.titleHeader h1 {
+    font-size: 35px;
+}
+
+.titleHeader p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* Carrossel */
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+/* Cards de Livros */
+.cards{
+    margin-top: 40px;
+}
+
+.cards h1{
     text-align: center;
 }
 
-.header h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-/* Cards de Livros */
 .livros {
     display: flex;
     justify-content: center;
@@ -172,23 +225,6 @@ legend {
     border-color: black;
 }
 
-.labelUser {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #666;
-    pointer-events: none;
-    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
-}
-
-.inputUser:focus ~ .labelUser,
-.inputUser:valid ~ .labelUser {
-    top: -10px;
-    left: 5px;
-    font-size: 12px;
-    color: black;
-}
-
 .btnEnviar {
     background-color: black;
     color: white;
@@ -202,6 +238,11 @@ legend {
 .btnEnviar:hover {
     background-color: #333;
     color: #fff;
+}
+
+.formUser a{
+    color: blue;
+    border-bottom: 1px solid blue;
 }
 
 /* Carrinho */
@@ -292,65 +333,24 @@ legend {
     color: #666;
 }
 
-/* Reset CSS básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilos gerais */
-body {
-    font-family: "Roboto", sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-/* Barra de navegação */
-.navBar {
-    background-color: #fff;
-    height: 80px;
+/* rodapé do index  */
+.footerIndex{
+    height: 300px;
+    background-color: #333;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    font-family: "Dancing Script", cursive;
-    font-size: 30px;
+.contato {
+    color: #fff;
+    margin-left: 40px;
+    margin-top: 30px;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
+.contato a{
+    color: rgb(59, 59, 252);
+    border-bottom: 1px solid rgb(59, 59, 252);
 }
 
-.menu a {
-    font-size: 18px;
-    margin-left: 20px;
-    color: black;
-    transition: border-bottom 0.3s ease;
-}
-
-.menu a:hover {
-    border-bottom: 2px solid black;
-}
-
-.searchBar {
-    padding: 8px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    margin-left: 20px;
-}
-
-/* Seção Sobre */
 .sobre {
     padding: 50px;
     max-width: 800px;
