@@ -23,26 +23,26 @@
     <header class="headerForm">
         <form action="" class="formUser">
             <fieldset>
-                <legend>Cadastro de Usuario</legend>
+                <legend>Cadastro de Livro</legend>
                 <div class="campos">
                     <div class="inputCampos">
-                        <input type="text" nome="nome" id="nome" class="inputUser" placeholder="Nome" require>
+                        <input type="text" id="titulo" class="inputUser" placeholder="Titulo" require>
                     </div>
                     <div class="inputCampos">
-                        <input type="text" nome="email" id="email" class="inputUser" placeholder="Email" required>
-
-                    </div>
-                    <div class="inputCampos">    
-                        <input type="password" nome="senha" id="senha" class="inputUser" placeholder="Senha" required>
+                        <input type="text" id="autor" class="inputUser" placeholder="Autor" required>
                     </div>
                     <div class="inputCampos">
-                        <input type="text" nome="estado" id="estado" class="inputUser" placeholder="Estado" required>
+                        <input type="text" id="editora" class="inputUser" placeholder="Editora" required>
                     </div>
                     <div class="inputCampos">
-                        <input type="text" nome="cidade" id="cidade" class="inputUser" placeholder="Cidade" required>
+                        <input type="text" id="preco" class="inputUser" placeholder="Preço" required>
                     </div>
                     <div class="inputCampos">
-                        <input type="text" nome="endereco" id="endereco" class="inputUser" placeholder="Endereço" required>
+                        <textarea id="discricao" placeholder="Discrição do Livros"></textarea>
+                    </div>
+                    <div class="file">
+                        <label for="imgLivro">Insira a capa do livro</label>
+                        <input type="file" name="imgLivro" id="imgLivro">
                     </div>
                 </div>
                 <input type="submit" class="btnEnviar">

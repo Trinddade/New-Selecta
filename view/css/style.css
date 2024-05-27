@@ -247,6 +247,40 @@ legend {
     border-bottom: 1px solid blue;
 }
 
+.file{
+    margin-top: 30px;
+    display: flex;
+}
+
+.file input{
+ display: none;
+}
+
+.file label{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black ;
+    transition: border-color 0.3s ease;
+    color: #ffffff;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.file label:hover{
+    color:black;
+    background-color: #fff;
+}
+
+.formUser textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
 /* Carrinho */
 .carrinho {
     padding: 20px;
@@ -351,4 +385,61 @@ legend {
 .contato a{
     color: rgb(59, 59, 252);
     border-bottom: 1px solid rgb(59, 59, 252);
+}
+
+/* adm de livros */
+
+.corpo{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxTable{
+    height: 600px;
+    width: 800px;
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tabela img{
+    width: 40px;
+    height: 60px;
+}
+
+.tbody{
+    width: 45px;
+    height: 65px;
+    font-size: 12px;
+}
+
+.tbody button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.tfoot button{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
 }
