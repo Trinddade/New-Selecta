@@ -403,3 +403,277 @@ legend {
     bottom: 0;
     width: 100%;
 }
+
+/* Estilos adicionais para melhorar o checkout */
+
+/* Estilos para os campos de entrada e labels */
+.inputCampos {
+    margin-bottom: 15px;
+    position: relative;
+}
+.inputUser {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+.inputUser:focus {
+    outline: none;
+    border-color: #5c90f2; /* Cor de foco */
+}
+.labelUser {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #888;
+    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+.inputUser:focus + .labelUser,
+.inputUser:valid + .labelUser {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #5c90f2; /* Cor de foco */
+}
+
+/* Estilos para os campos de opções de envio */
+.shipping-options .inputCampos {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilos para o botão de enviar */
+.btnEnviar {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #5c90f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btnEnviar:hover {
+    background-color: #3a6eb4;
+}
+
+/* Estilos adicionais para o layout responsivo podem ser adicionados aqui */
+
+/* Estilos adicionais para os novos elementos adicionados */
+
+/* Estilização para o campo select */
+.inputUser {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos para o campo de número do cartão, validade e CVV */
+.inputUser:not(select) {
+    margin-bottom: 15px;
+    position: relative;
+}
+.inputUser:not(select):focus {
+    outline: none;
+    border-color: #5c90f2; /* Cor de foco */
+}
+.labelUser {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #888;
+    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+.inputUser:not(select):focus + .labelUser,
+.inputUser:not(select):valid + .labelUser {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #5c90f2; /* Cor de foco */
+}
+
+/* Estilos para o botão de finalizar compra */
+.btnEnviar {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #5c90f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btnEnviar:hover {
+    background-color: #3a6eb4;
+}
+
+/* Estilos adicionais para o layout responsivo podem ser adicionados aqui */
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a barra de navegação */
+.navBar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navBar .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navBar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navBar .menu .links {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navBar .menu .links:hover {
+    text-decoration: underline;
+}
+
+.navBar .menu #searchBar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Estilos para o conteúdo principal */
+.checkout {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.checkout-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.checkout-form fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkout-form fieldset legend {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.checkout-form .inputCampos {
+    margin-bottom: 10px;
+}
+
+.checkout-form .inputUser {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form .labelUser {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #999;
+    transition: 0.3s ease;
+}
+
+.checkout-form .inputUser:focus + .labelUser,
+.checkout-form .inputUser:not(:placeholder-shown) + .labelUser {
+    top: 0;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.checkout-form .btnEnviar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form .btnEnviar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Media query para responsividade */
+@media (max-width: 768px) {
+    .checkout {
+        padding: 10px;
+    }
+
+    .checkout-form {
+        padding: 10px;
+    }
+}

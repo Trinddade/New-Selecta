@@ -25,6 +25,7 @@
         <div id="cartItems"></div>
         <h3>Total: R$ <span id="totalPrice">0.00</span></h3>
         <button onclick="clearCart()">Limpar Carrinho</button>
+        <button class="btn-comprar" onclick="irParaCheckout()">Comprar</button>
     </section>
 
     <footer class="footer">
@@ -79,6 +80,10 @@
         function clearCart() {
             localStorage.removeItem('cart');
             loadCart();
+        }
+
+        function irParaCheckout() {
+            window.location.href = 'checkout.html';
         }
     </script>
 </body>

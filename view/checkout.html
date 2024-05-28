@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Checkout - Livraria Selecta</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html">Selecta</a>
+        </div>
+        <div class="menu">
+            <a href="livros.html" class="links">Livros</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
+            <a href="sobre.html" class="links">Sobre</a>
+            <a href="login.html" class="links">Login</a>
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar">
+        </div>
+    </nav>
+
+    <main class="checkout">
+        <form class="checkout-form" action="confirmacao.html">
+            <h2>Finalizar Compra</h2>
+            <div id="checkoutItems" class="checkout-items"></div>
+            <h3>Total Produtos: R$ <span id="checkoutProdutosTotal">0.00</span></h3>
+            <fieldset class="personal-info">
+                <legend>Informações Pessoais</legend>
+                <div class="inputCampos">
+                    <input type="text" class="inputUser" id="nome" name="nome" required>
+                    <label for="nome" class="labelUser">Nome Completo</label>
+                </div>
+                <div class="inputCampos">
+                    <input type="email" class="inputUser" id="email" name="email" required>
+                    <label for="email" class="labelUser">Email</label>
+                </div>
+                <div class="inputCampos">
+                    <input type="text" class="inputUser" id="endereco" name="endereco" required>
+                    <label for="endereco" class="labelUser">Endereço</label>
+                </div>
+            </fieldset>
+            <fieldset class="payment-info">
+                <legend>Informações de Pagamento</legend>
+                <div class="inputCampos">
+                    <label for="formaPagamento" class="labelUser"></label>
+                    <select id="formaPagamento" name="formaPagamento" class="inputUser" required>
+                        <option value="">Selecione...</option>
+                        <option value="pix">PIX</option>
+                        <option value="debito">Débito</option>
+                        <option value="credito">Crédito</option>
+                    </select>
+                </div>
+                <div id="infoCartao" style="display: none;">
+                    <div class="inputCampos">
+                        <input type="text" class="inputUser" id="numeroCartao" name="numeroCartao" placeholder="Número do Cartão">
+                        <label for="numeroCartao" class="labelUser"></label>
+                    </div>
+                    <div class="inputCampos">
+                        <input type="text" class="inputUser" id="validade" name="validade" placeholder="Validade (MM/AA)">
+                        <label for="validade" class="labelUser"></label>
+                    </div>
+                    <div class="inputCampos">
+                        <input type="text" class="inputUser" id="cvv" name="cvv" placeholder="CVV">
+                        <label for="cvv" class="labelUser"></label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="shipping-options">
+                <legend>Opções de Envio</legend>
+                <div class="inputCampos">
+                    <label><input type="radio" name="envio" value="expresso"> Envio Expresso (+ R$ 10,00)</label>
+                </div>
+                <div class="inputCampos">
+                    <label><input type="radio" name="envio" value="padrao" checked> Envio Padrão (+ R$ 0,00)</label>
+                </div>
+            </fieldset>
+            <h3>Total a Pagar: R$ <span id="checkoutTotalPrice">0.00</span></h3>
+            <button type="button" id="btnFinalizarCompra" class="btnEnviar">Finalizar Compra</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', loadCheckout);
+
+        function loadCheckout() {
+            const checkoutItems = document.getElementById('checkoutItems');
+            const checkoutProdutosTotal = document.getElementById('checkoutProdutosTotal');
+            const checkoutTotalPrice = document.getElementById('checkoutTotalPrice');
+            const formaPagamentoSelect = document.getElementById('formaPagamento');
+            const infoCartao = document.getElementById('infoCartao');
+            const btnFinalizarCompra = document.getElementById('btnFinalizarCompra');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalProdutos = 0;
+
+            checkoutItems.innerHTML = '';
+
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('checkout-item');
+                itemElement.innerHTML = `
+                    <div class="item-info">
+                        <img src="${item.image}" alt="${item.title}" class="item-image">
+                        <div class="item-details">
+                            <h4>${item.title}</h4>
+                            <p>Preço: R$ ${item.price.toFixed(2)}</p>
+                            <p>Quantidade: ${item.quantity}</p>
+                        </div>
+                    </div>
+                `;
+                checkoutItems.appendChild(itemElement);
+                totalProdutos += item.price * item.quantity;
+            });
+
+            checkoutProdutosTotal.textContent = totalProdutos.toFixed(2);
+
+            // Atualizar total com base na opção de envio selecionada
+            const shippingOptions = document.querySelectorAll('input[name="envio"]');
+            let shippingCost = 0;
+
+            shippingOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    if (this.value === 'expresso') {
+                        shippingCost = 10.00;
+                    } else {
+                        shippingCost = 0.00;
+                    }
+                    updateTotal();
+                });
+            });
+
+            function updateTotal() {
+                const total = totalProdutos + shippingCost;
+                checkoutTotalPrice.textContent = total.toFixed(2);
+            }
+
+            // Mudança na exibição dos campos de cartão conforme a forma de pagamento selecionada
+            formaPagamentoSelect.addEventListener('change', function() {
+                const formaPagamento = this.value;
+
+                if (formaPagamento === 'pix') {
+                    infoCartao.style.display = 'none';
+                } else {
+                    infoCartao.style.display = 'block';
+                }
+            });
+
+            // Ação ao clicar em Finalizar Compra
+            btnFinalizarCompra.addEventListener('click', function() {
+                const formaPagamento = formaPagamentoSelect.value;
+
+                if (formaPagamento === 'pix') {
+                    alert('Chave PIX: CNPJ 12.345.678/0001-90'); // Exemplo de chave PIX fictícia
+                } else {
+                    // Verificação opcional dos campos de cartão se necessário
+                    const numeroCartao = document.getElementById('numeroCartao').value.trim();
+                    const validade = document.getElementById('validade').value.trim();
+                    const cvv = document.getElementById('cvv').value.trim();
+
+                    // Exemplo de validação simples dos campos de cartão
+                    if (!numeroCartao || !validade || !cvv) {
+                        alert('Por favor, preencha todas as informações do cartão.');
+                        return;
+                    }
+
+                    // Aqui você pode adicionar lógica para validar os campos de cartão se necessário
+                    // E depois enviar o formulário ou fazer outra ação conforme a forma de pagamento
+                    document.querySelector('.checkout-form').submit();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
