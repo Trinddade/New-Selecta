@@ -677,3 +677,68 @@ body {
         padding: 10px;
     }
 }
+
+/* Estilos para a seção de FAQ */
+.faq {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f1f1f1;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+    border-left: 2px solid #5c90f2;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 10px 20px;
+}
+
+/* Adicionando um ícone de mais/menos nas perguntas do FAQ */
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
