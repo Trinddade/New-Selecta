@@ -13,10 +13,11 @@
         </div>
         <div class="menu">
             <a href="livros.html" class="links">Livros</a>
-            <a href="" class="links">Carrinho</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
             <a href="sobre.html" class="links">Sobre</a>
+            <a href="loginAdm.html">Administração</a>
             <a href="login.html" class="links">Login</a>
-            <input type="text" placeholder="Pesquisa" class="searchBar">
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar" onkeyup="searchBooks()">
         </div>
     </nav>
 
@@ -27,6 +28,13 @@
             <p class="livro-sinopse">
                 Em Dom Casmurro, o narrador Bento Santiago retoma a infância que passou na Rua de Matacavalos e conta a história do amor e das desventuras que viveu com Capitu, uma das personagens mais enigmáticas e intrigantes da literatura brasileira. Nas páginas deste romance, encontra-se a versão de um homem perturbado pelo ciúme, que revela aos poucos sua psicologia complexa e enreda o leitor em sua narrativa ambígua acerca do acontecimento ou não do adultério da mulher com olhos de ressaca, uma das maiores polêmicas da literatura brasileira.
             </p>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
             <p class="livro-preco">Preço: R$ 19,99</p>
             <button class="btn-comprar">Comprar</button>
         </div>
@@ -36,4 +44,5 @@
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
 </body>
+<script src="js/livro.js"></script>
 </html>
