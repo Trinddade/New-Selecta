@@ -777,3 +777,90 @@ body {
 .faq-item.active .faq-question::after {
     transform: rotate(45deg);
 }
+
+/* avaliação de livros */
+
+.avaliacao{
+    display: flex;
+    justify-content: center;
+}
+
+.star-icon{
+    list-style-type: none;
+    border: 1px solid #ffff;
+    cursor: pointer;
+    color: #ffE500;
+}
+
+.star-icon::before{
+    content: "\2605";
+}
+
+.star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+}
+
+.avaliacao:hover .star-icon::before{
+    content: "\2605";
+}
+
+.star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+}
+
+
+/* tela adm*/
+.corpo{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxTable{
+    height: 600px;
+    width: 800px;
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tabela img{
+    width: 40px;
+    height: 60px;
+}
+
+.tbody{
+    width: 45px;
+    height: 65px;
+    font-size: 12px;
+}
+
+.tbody button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.tfoot button{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+}
