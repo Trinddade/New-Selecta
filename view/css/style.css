@@ -33,7 +33,7 @@ a {
 }
 
 .navBar a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ a {
 }
 
 .menu a:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 .searchBar {
@@ -247,6 +247,7 @@ legend {
     border-bottom: 1px solid blue;
 }
 
+
 .file{
     margin-top: 30px;
     display: flex;
@@ -280,6 +281,8 @@ legend {
     border: 1px solid #ccc;
     padding: 8px;
 }
+
+
 
 /* Carrinho */
 .carrinho {
@@ -387,90 +390,390 @@ legend {
     border-bottom: 1px solid rgb(59, 59, 252);
 }
 
-/* adm de livros */
+.sobre {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.corpo{
+.sobre h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sobre li strong {
+    display: inline-block;
+    width: 100px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    margin-top: 50px;
+}
+
+/* Estilos adicionais para melhorar o checkout */
+
+/* Estilos para os campos de entrada e labels */
+.inputCampos {
+    margin-bottom: 15px;
+    position: relative;
+}
+.inputUser {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+.inputUser:focus {
+    outline: none;
+    border-color: #5c90f2; /* Cor de foco */
+}
+.labelUser {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #888;
+    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+.inputUser:focus + .labelUser,
+.inputUser:valid + .labelUser {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #5c90f2; /* Cor de foco */
+}
+
+/* Estilos para os campos de opções de envio */
+.shipping-options .inputCampos {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilos para o botão de enviar */
+.btnEnviar {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #5c90f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btnEnviar:hover {
+    background-color: #3a6eb4;
+}
+
+/* Estilos adicionais para o layout responsivo podem ser adicionados aqui */
+
+/* Estilos adicionais para os novos elementos adicionados */
+
+/* Estilização para o campo select */
+.inputUser {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos para o campo de número do cartão, validade e CVV */
+.inputUser:not(select) {
+    margin-bottom: 15px;
+    position: relative;
+}
+.inputUser:not(select):focus {
+    outline: none;
+    border-color: #5c90f2; /* Cor de foco */
+}
+.labelUser {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #888;
+    transition: top 0.3s ease, left 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+.inputUser:not(select):focus + .labelUser,
+.inputUser:not(select):valid + .labelUser {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #5c90f2; /* Cor de foco */
+}
+
+/* Estilos para o botão de finalizar compra */
+.btnEnviar {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background-color: #5c90f2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btnEnviar:hover {
+    background-color: #3a6eb4;
+}
+
+/* Estilos adicionais para o layout responsivo podem ser adicionados aqui */
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a barra de navegação */
+.navBar {
+    background-color: #333;
+    color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navBar .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navBar .menu {
+    display: flex;
     align-items: center;
 }
 
-.boxTable{
-    height: 600px;
-    width: 800px;
-
+.navBar .menu .links {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
 }
 
-table{
-    border-collapse: collapse;
+.navBar .menu #searchBar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Estilos para o conteúdo principal */
+.checkout {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.checkout-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.checkout-form fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkout-form fieldset legend {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.checkout-form .inputCampos {
+    margin-bottom: 10px;
+}
+
+.checkout-form .inputUser {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form .labelUser {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #999;
+    transition: 0.3s ease;
+}
+
+.checkout-form .inputUser:focus + .labelUser,
+.checkout-form .inputUser:not(:placeholder-shown) + .labelUser {
+    top: 0;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.checkout-form .btnEnviar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form .btnEnviar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 
-caption{
-    font-weight: bolder;
-    font-size: 30px;
+.footer p {
+    margin: 0;
 }
 
-th, td{
-    border: 1px solid black;
-    padding: 10px;
+/* Media query para responsividade */
+@media (max-width: 768px) {
+    .checkout {
+        padding: 10px;
+    }
+
+    .checkout-form {
+        padding: 10px;
+    }
 }
 
-.tabela img{
-    width: 40px;
-    height: 60px;
+/* Estilos para a seção de FAQ */
+.faq {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
 }
 
-.tbody{
-    width: 45px;
-    height: 65px;
-    font-size: 12px;
+.faq h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.tbody button{
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
     padding: 10px 20px;
-    background-color: transparent;
-    border: 1px solid black;
-    cursor: pointer;
-    outline: none;
-}
-.tfoot button{
-    background-color: transparent;
-    outline: none;
-    border: 1px solid black;
-    padding: 10px 30px;
-    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-/* avaliação de livros */
-
-.avaliacao{
-    display: flex;
-    justify-content: center;
+.faq-question:hover {
+    background-color: #f1f1f1;
 }
 
-.star-icon{
-    list-style-type: none;
-    border: 1px solid #ffff;
-    cursor: pointer;
-    color: #ffE500;
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+    border-left: 2px solid #5c90f2;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
-.star-icon::before{
-    content: "\2605";
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 10px 20px;
 }
 
-.star-icon.ativo ~ .star-icon::before{
-    content: "\2606";
+/* Adicionando um ícone de mais/menos nas perguntas do FAQ */
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
 }
 
-.avaliacao:hover .star-icon::before{
-    content: "\2605";
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
 }
-
-.star-icon:hover ~ .star-icon::before{
-    content: "\2606";
-}
-
