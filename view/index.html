@@ -7,82 +7,135 @@
     <title>Livraria Selecta</title>
 </head>
 <body>
-        <nav class="navBar">
-            <div class="logo">
-                <a href="index.html">Selecta</a>
-            </div>
-            <div class="menu">
-                <a href="livros.html" class="links">Livros</a>
-                <a href="" class="links">Carrinho</a>
-                <a href="sobre.html" class="links">Sobre</a>
-                <a href="login.html" class="links">Login</a>
-                <input type="text" placeholder="Pesquisa" class="searchBar">
-            </div>
-        </nav>
-        <header class="headerIndex">
-            <div class="carousel">
-                <div class="carousel-item active">
-                    <img src="img/biblioteca 3.jpg" alt="Imagem de uma biblioteca">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/biblioteca 2.jpg" alt="Imagem de uma biblioteca">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/biblioteca 1.jpg" alt="Imagem de uma biblioteca">
-                </div>
-            </div>  
-            <div class="titleHeader">
-                <h1>Seja Bem-Vindo à Livraria Online Selecta!</h1>
-                <p>Somos um e-commerce focado na venda e distribuição de livros, garantindo uma boa experiência de compra com uma interface intuitiva.</p>
-            </div>  
-        </header>
-        <div class="cards">
-            <h1>Clássicos da Literatura</h1>
-            <section class="livros" id="livrosSection">
-                <div class="livro-card" data-title="Memórias póstumas de Brás Cubas">
-                    <a href="./livros1.html">
-                        <img src="img/livro1.jpg" alt="Memórias póstumas de Brás Cubas">
-                        <h3 class="livro-titulo">Memórias póstumas de Brás Cubas</h3>
-                        <p class="livro-preco">R$ 29,90</p>
-                    </a>
-                    <button onclick="addToCart('Memórias póstumas de Brás Cubas', 29.90)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="livro-card" data-title="O Cortiço">
-                    <a href="./livro2.html">
-                        <img src="img/livro2.jpg" alt="O Cortiço">
-                        <h3 class="livro-titulo">O Cortiço</h3>
-                        <p class="livro-preco">R$ 24,99</p>
-                    </a>
-                    <button onclick="addToCart('O Cortiço', 24.99)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="livro-card" data-title="Dom Casmurro">
-                    <a href="./livro3.html">
-                        <img src="img/livro3.jpg" alt="Dom Casmurro">
-                        <h3 class="livro-titulo">Dom Casmurro</h3>
-                        <p class="livro-preco">R$ 19,99</p>
-                    </a>
-                    <button onclick="addToCart('Dom Casmurro', 19.99)">Adicionar ao Carrinho</button>
-                </div>
-                <div class="livro-card" data-title="Campo Geral">
-                    <a href="./livro4.html">
-                        <img src="img/livro4.jpg" alt="Campo Geral">
-                        <h3 class="livro-titulo">Campo Geral</h3>
-                        <p class="livro-preco">R$ 34,50</p>
-                    </a>
-                    <button onclick="addToCart('Campo Geral', 34.50)">Adicionar ao Carrinho</button>
-                </div>
-            </section>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html">Selecta</a>
         </div>
-        <footer class="footerIndex">
-            <div class="contato">
-                <h1>formas de contato</h1>
-                <p>Telefone de Contato: (00) 00000-0000</p>
-                <p>Email de Contato: livrariaSelecta@selecta.com</p>
-                <p>Instagram Coorporativo: <a href="#">Instagram</a></p>
-                <p>WhatsApp Coorporativo: <a href="#">WhatsApp</a></p>
+        <div class="menu">
+            <a href="livros.html" class="links">Livros</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
+            <a href="sobre.html" class="links">Sobre</a>
+            <a href="login.html" class="links">Login</a>
+            <input type="text" placeholder="Pesquisa" class="searchBar">
+        </div>
+    </nav>
+    <header class="headerIndex">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="img/biblioteca 3.jpg" alt="Imagem de uma biblioteca">
             </div>
-        </footer>
-        <script src="js/carousel.js"></script>
-        <script src="js/livros.js"></script>
+            <div class="carousel-item">
+                <img src="img/biblioteca 2.jpg" alt="Imagem de uma biblioteca">
+            </div>
+            <div class="carousel-item">
+                <img src="img/biblioteca 1.jpg" alt="Imagem de uma biblioteca">
+            </div>
+        </div>  
+        <div class="titleHeader">
+            <h1>Seja Bem-Vindo à Livraria Online Selecta!</h1>
+            <p>Somos um e-commerce focado na venda e distribuição de livros, garantindo uma boa experiência de compra com uma interface intuitiva.</p>
+        </div>  
+    </header>
+    <div class="cards">
+        <h1>Clássicos da Literatura</h1>
+        <section class="livros" id="livrosSection">
+            <div class="livro-card" data-title="Memórias póstumas de Brás Cubas">
+                <a href="./livros1.html">
+                    <img src="img/livro1.jpg" alt="Memórias póstumas de Brás Cubas">
+                    <h3 class="livro-titulo">Memórias póstumas de Brás Cubas</h3>
+                    <p class="livro-preco">R$ 29,90</p>
+                </a>
+                <button onclick="addToCart('Memórias póstumas de Brás Cubas', 29.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="livro-card" data-title="O Cortiço">
+                <a href="./livro2.html">
+                    <img src="img/livro2.jpg" alt="O Cortiço">
+                    <h3 class="livro-titulo">O Cortiço</h3>
+                    <p class="livro-preco">R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('O Cortiço', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="livro-card" data-title="Dom Casmurro">
+                <a href="./livro3.html">
+                    <img src="img/livro3.jpg" alt="Dom Casmurro">
+                    <h3 class="livro-titulo">Dom Casmurro</h3>
+                    <p class="livro-preco">R$ 19,99</p>
+                </a>
+                <button onclick="addToCart('Dom Casmurro', 19.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="livro-card" data-title="Campo Geral">
+                <a href="./livro4.html">
+                    <img src="img/livro4.jpg" alt="Campo Geral">
+                    <h3 class="livro-titulo">Campo Geral</h3>
+                    <p class="livro-preco">R$ 34,50</p>
+                </a>
+                <button onclick="addToCart('Campo Geral', 34.50)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </div>
+    <!-- Seção FAQ -->
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">Quais formas de pagamento são aceitas?</h3>
+            <div class="faq-answer">
+                <p>Aceitamos cartões de crédito, débito e pagamentos via PIX.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Como posso acompanhar meu pedido?</h3>
+            <div class="faq-answer">
+                <p>Após a confirmação do pagamento, você receberá um e-mail com o código de rastreamento para acompanhar seu pedido.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Qual é o prazo de entrega?</h3>
+            <div class="faq-answer">
+                <p>O prazo de entrega varia de acordo com a localização. Geralmente, entregamos em até 10 dias úteis.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Posso devolver um livro?</h3>
+            <div class="faq-answer">
+                <p>Sim, você pode devolver um livro em até 7 dias após o recebimento, desde que ele esteja em perfeito estado.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footerIndex">
+        <div class="contato">
+            <h1>formas de contato</h1>
+            <p>Telefone de Contato: (00) 00000-0000</p>
+            <p>Email de Contato: livrariaSelecta@selecta.com</p>
+            <p>Instagram Coorporativo: <a href="#">Instagram</a></p>
+            <p>WhatsApp Coorporativo: <a href="#">WhatsApp</a></p>
+        </div>
+    </footer>
+    <script src="js/carousel.js"></script>
+    <script src="js/livros.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        });
+
+        function addToCart(title, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.title === title);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ title, price, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${title} foi adicionado ao carrinho.`);
+        }
+    </script>
 </body>
 </html>
