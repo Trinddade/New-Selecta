@@ -790,8 +790,9 @@ body {
     border: 1px solid #ffff;
     cursor: pointer;
     color: #ffE500;
+    font-size: 30px;
+    margin: 4px;
 }
-
 .star-icon::before{
     content: "\2605";
 }
