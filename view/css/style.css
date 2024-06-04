@@ -865,3 +865,64 @@ th, td{
     padding: 10px 30px;
     cursor: pointer;
 }
+
+
+.sessaoComentarios{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 20px;
+}
+
+.sessaoComentarios h1{
+    text-align: center;
+}
+
+.comentarioInput{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+
+.comentarioInput input, textarea{
+    width: 855px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+}
+
+#btnComentar{
+    width: 140px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#btnComentar:hover{
+    background-color: white;
+    color: black;
+}
+
+.comentarios{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius:5px ;
+    height: 500px;
+    width: 900px;
+    margin-top:30px ;
+    padding: 30px;
+}
+
+.comentarios p{
+    font-size: 22px;
+}
