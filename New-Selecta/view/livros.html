@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Livraria Selecta - Livros</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html">Selecta</a>
+        </div>
+        <div class="menu">
+            <a href="livros.html" class="links">Livros</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
+            <a href="sobre.html" class="links">Sobre</a>
+            <a href="login.html" class="links">Login</a>
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar" onkeyup="searchBooks()">
+        </div>
+    </nav>
+
+    <section class="livros" id="livrosSection">
+        <div class="livro-card" data-title="Memórias póstumas de Brás Cubas">
+            <a href="./livros1.html">
+                <img src="img/livro1.jpg" alt="Memórias póstumas de Brás Cubas">
+                <h3 class="livro-titulo">Memórias póstumas de Brás Cubas</h3>
+                <p class="livro-preco">R$ 29,90</p>
+            </a>
+            <button onclick="addToCart('Memórias póstumas de Brás Cubas', 29.90)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="livro-card" data-title="O Cortiço">
+            <a href="./livro2.html">
+                <img src="img/livro2.jpg" alt="O Cortiço">
+                <h3 class="livro-titulo">O Cortiço</h3>
+                <p class="livro-preco">R$ 24,99</p>
+            </a>
+            <button onclick="addToCart('O Cortiço', 24.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="livro-card" data-title="Dom Casmurro">
+            <a href="./livro3.html">
+                <img src="img/livro3.jpg" alt="Dom Casmurro">
+                <h3 class="livro-titulo">Dom Casmurro</h3>
+                <p class="livro-preco">R$ 19,99</p>
+            </a>
+            <button onclick="addToCart('Dom Casmurro', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="livro-card" data-title="Campo Geral">
+            <a href="./livro4.html">
+                <img src="img/livro4.jpg" alt="Campo Geral">
+                <h3 class="livro-titulo">Campo Geral</h3>
+                <p class="livro-preco">R$ 34,50</p>
+            </a>
+            <button onclick="addToCart('Campo Geral', 34.50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="livro-card" data-title="Terra sonâmbula">
+            <a href="./livro5.html">
+                <img src="img/livro5.jpg" alt="Terra sonâmbula">
+                <h3 class="livro-titulo">Terra sonâmbula</h3>
+                <p class="livro-preco">R$ 27,80</p>
+            </a>
+            <button onclick="addToCart('Terra sonâmbula', 27.80)">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/livros.js"></script>
+</body>
+</html>
