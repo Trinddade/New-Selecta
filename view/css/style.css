@@ -893,7 +893,7 @@ th, td{
 }
 
 .comentarioInput input, textarea{
-    width: 855px;
+    width: 500px;
     padding: 10px;
     margin-top: 20px;
     border: 1px solid black;
@@ -923,6 +923,10 @@ th, td{
     padding: 30px;
 }
 
-.comentarios p{
+.paragrafo{
+    display: flex;
+    margin-top: 10px;
     font-size: 22px;
+    text-wrap: wrap;
+    flex-wrap: wrap;
 }
