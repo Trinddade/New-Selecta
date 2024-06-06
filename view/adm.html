@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html">Selecta</a>
+        </div>
+        <div class="menu">
+            <a href="livros.html" class="links">Livros</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
+            <a href="sobre.html" class="links">Sobre</a>
+            <a href="loginAdm.html">Administração</a>
+            <a href="login.html" class="links">Login</a>
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar" onkeyup="searchBooks()">
+        </div>
+    </nav>
+
+
+<section class="corpo">
+    <div class="boxTable">
+        <table class="tabela">
+            <caption>Catalogo de Livros</caption>
+            <thead>
+                <tr>
+                    <th>Capa</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Editora</th>
+                    <th>Preço</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr>
+                    <td><img src="img/livro1.jpg" alt=""></td>
+                    <td>Memórias póstumas de Brás Cubas</td>
+                    <td>Machado de Assis</td>
+                    <td>editora 1</td>
+                    <td>R$ 29,90</td>
+                    <td><button>Alterar</button></td>
+                    <td><button>Excluir</button></td>
+                </tr>
+                <tr>
+                    <td><img src="img/livro2.jpg" alt=""></td>
+                    <td>O Cortiço</td>
+                    <td>Aluísio Azevedo</td>
+                    <td>editora 2</td>
+                    <td>R$ 24,99</td>
+                    <td><button>Alterar</button></td>
+                    <td><button>Excluir</button></td>
+                </tr>
+                <tr>
+                    <td><img src="img/livro3.jpg" alt=""></td>
+                    <td>Dom Casmurro</td>
+                    <td>Machado de Assis</td>
+                    <td>editora 3</td>
+                    <td>R$ 19,99</td>
+                    <td><button>Alterar</button></td>
+                    <td><button>Excluir</button></td>
+                </tr>
+            </tbody>
+            <tfoot class="tfoot">
+                <tr>
+                    <th colspan="7"><a href="cadLivro.html"><button>Adicionar Livro</button></a></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>
+</body>
+</html>

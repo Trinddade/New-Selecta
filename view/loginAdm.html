@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login Selecta</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html">Selecta</a>
+        </div>
+        <div class="menu">
+            <a href="livros.html" class="links">Livros</a>
+            <a href="carrinho.html" class="links">Carrinho</a>
+            <a href="sobre.html" class="links">Sobre</a>
+            <a href="loginAdm.html">Administração</a>
+            <a href="login.html" class="links">Login</a>
+            <input type="text" id="searchBar" placeholder="Pesquisa" class="searchBar" onkeyup="searchBooks()">
+        </div>
+    </nav>
+
+    <header class="headerForm">
+        <form action="" class="formUser">
+            <fieldset>
+                <legend>Login de Administrador</legend>
+                <div class="campos">
+                    <div class="inputCampos">
+                        <input type="text" nome="email" id="email" class="inputUser" placeholder="Email">
+                    </div>
+                    <div class="inputCampos">    
+                        <input type="password" nome="senha" id="senha" class="inputUser" placeholder="Senha" required>
+                    </div><br><br>
+                </div>
+                <input type="submit" class="btnEnviar" value="Entrar"><br><br>
+                <p>sem autenticação? <a href="adm.html">Administração</a></p>
+            </fieldset>
+        </form>
+    </header>
+</body>
+</html>
