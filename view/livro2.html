@@ -27,13 +27,34 @@
             <p class="livro-sinopse">
                 O romance mostra as mazelas e a vida miserável dos moradores de duas habitações coletivas. João Romão é ganancioso comerciante de origem portuguesa, dono de um terreno no Rio de Janeiro onde constrói moradias de baixo custo para obter renda.
             </p>
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
             <p class="livro-preco">Preço: R$ 24,99</p>
             <button class="btn-comprar">Comprar</button>
         </div>
     </section>
-
+    <div class="sessaoComentarios">
+        <form action="" class="comentar" id="formulario">
+        <div class="comentarioInput">
+            <h1>Comentar</h1>
+            <input type="text" id="nomeComentario" placeholder="Coloque seu nome:">
+            <textarea id="comentario" placeholder="Escreva seu Comentario:"></textarea>
+            <input type="submit" value="Comentar" id="btnComentar">
+        </div>
+        </form>
+        <div class="comentarios" id="commentPost">
+            <h1>Comentarios</h1>
+        </div>
+    </div>
     <footer class="footer">
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/comentários.js"></script>
+    <script src="js/livro.js"></script>
 </body>
 </html>
