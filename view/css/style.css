@@ -866,6 +866,146 @@ th, td{
     cursor: pointer;
 }
 
+/* Estilos para o quiz */
+.quizz {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quiz-box {
+    padding: 20px;
+}
+
+.quiz-box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.start-btn {
+    display: block;
+    margin: 20px auto;
+}
+
+.next-btn {
+    display: none;
+    margin-top: 20px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .quizz {
+        padding: 10px;
+    }
+}
+
+/* Estilos para os botões do quiz */
+.btn {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.start-btn {
+    display: block;
+    margin: 20px auto;
+}
+
+.next-btn {
+    display: none;
+    margin-top: 20px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+.footerIndex {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contato {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contato h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.redes-sociais {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-link img {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px;
+}
 
 .sessaoComentarios{
     display: flex;
@@ -929,4 +1069,89 @@ th, td{
     font-size: 22px;
     text-wrap: wrap;
     flex-wrap: wrap;
+}
+
+.avaliacao{
+    display: flex;
+    justify-content: center;
+}
+
+.star-icon{
+    list-style-type: none;
+    border: 1px solid #ffff;
+    cursor: pointer;
+    color: #ffE500;
+    font-size: 30px;
+    margin: 4px;
+}
+.star-icon::before{
+    content: "\2605";
+}
+
+.star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+}
+
+.avaliacao:hover .star-icon::before{
+    content: "\2605";
+}
+
+.star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+}
+
+/* tela adm*/
+.corpo{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxTable{
+    height: 600px;
+    width: 800px;
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+caption{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tabela img{
+    width: 40px;
+    height: 60px;
+}
+
+.tbody{
+    width: 45px;
+    height: 65px;
+    font-size: 12px;
+}
+
+.tbody button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.tfoot button{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
 }
