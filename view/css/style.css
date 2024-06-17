@@ -899,7 +899,7 @@ body {
 }
 
 .comentarioInput{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(121, 126, 123, 0.1);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -913,7 +913,7 @@ body {
     width: 500px;
     padding: 10px;
     margin-top: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(177, 166, 166);
     border-radius: 5px;
     background-color: transparent;
     outline: none;
@@ -921,18 +921,18 @@ body {
 
 #btnComentar{
     width: 140px;
-    background-color: black;
+    background-color: rgb(70, 66, 66);
     color: white;
     padding: 10px;
 }
 
 #btnComentar:hover{
     background-color: white;
-    color: black;
+    color: rgb(167, 159, 159);
 }
 
 .comentarios{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(163, 158, 158, 0.1);
     border-radius:5px ;
     height: 500px;
     width: 900px;
@@ -1031,4 +1031,230 @@ th, td{
     border: 1px solid black;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+/* Estilos para o ícone de alternância de tema */
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Ajuste a posição direita conforme necessário */
+    transform: translateY(-50%);
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme desejado */
+    cursor: pointer;
+    z-index: 1000; /* Garante que o ícone esteja sobreposto a outros elementos */
+}
+
+.theme-toggle.dark {
+    color: gray; /* Cor do ícone para modo escuro */
+}
+
+/* Estilos para os elementos que mudam de cor */
+.dark-theme {
+    background-color: rgb(14, 12, 12);
+    color: rgb(160, 138, 138);
+}
+
+.dark-theme .faq-item, .dark-theme form, .dark-theme .quiz-question {
+    background-color: #a39898; /* Fundo escuro para faqs, formulários e quizzes */
+    color: #a59494; /* Texto cinza claro para faqs, formulários e quizzes */
+}
+
+.dark-theme .card {
+    background-color: #d1bdbd; /* Fundo escuro para cards */
+    color: #a59b9b; /* Texto cinza claro para cards */
+}
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cor de fundo padrão */
+    color: #333333; /* Cor do texto padrão */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para a navegação */
+.navBar {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navBar .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+}
+
+.navBar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navBar .menu .links {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+.navBar .menu .links:hover {
+    color: #007bff;
+}
+
+.navBar .searchBar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para o cabeçalho */
+.headerIndex {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.headerIndex h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.headerIndex p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Estilos para os cards */
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cards h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.livro-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.livro-card:hover {
+    background-color: #f0f0f0;
+}
+
+.livro-card a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.livro-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.livro-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.livro-card .livro-preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.livro-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.livro-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o tema noturno */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #cccccc;
+}
+
+.dark-theme .navBar {
+    background-color: #333333;
+}
+
+.dark-theme .navBar .logo a {
+    color: #cccccc;
+}
+
+.dark-theme .navBar .menu .links {
+    color: #cccccc;
+}
+
+.dark-theme .searchBar {
+    background-color: #333333;
+    color: #cccccc;
+    border-color: #555555;
+}
+
+.dark-theme .headerIndex {
+    color: #cccccc;
+}
+
+.dark-theme .cards {
+    background-color: #333333;
+    color: #cccccc;
+}
+
+.dark-theme .livro-card {
+    background-color: #555555; /* Altera a cor dos cards para cinza escuro */
+    color: #cccccc;
+}
+
+.dark-theme .livro-card:hover {
+    background-color: #444444; /* Altera a cor de fundo dos cards em hover para um tom mais escuro */
+}
+
+.dark-theme .livro-card a {
+    color: #cccccc;
+}
+
+.dark-theme .livro-card .livro-preco {
+    color: #00cccc;
+}
+
+.dark-theme .livro-card button {
+    background-color: #00cccc;
+}
+
+.dark-theme .livro-card button:hover {
+    background-color: #009999;
 }
