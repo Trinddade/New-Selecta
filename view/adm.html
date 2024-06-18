@@ -22,56 +22,128 @@
     </nav>
 
 
+    <header class="headerForm">
+        <form id="formLivro" class="formUser" style="width: 700px;">
+            <fieldset>
+                <legend>Cadastro de Livro</legend>
+                <div class="campos">
+                    <div class="inputCampos">
+                        <input type="text" id="titulo" class="inputUser" placeholder="Título" required>
+                    </div>
+                    <div class="inputCampos">
+                        <input type="text" id="autor" class="inputUser" placeholder="Autor" required>
+                    </div>
+                    <div class="inputCampos">
+                        <input type="text" id="editora" class="inputUser" placeholder="Editora" required>
+                    </div>
+                    <div class="inputCampos">
+                        <input type="number" id="preco" class="inputUser" placeholder="Preço" step="0.01" required>
+                    </div>
+                    <div class="inputCampos">
+                        <textarea id="descricao" placeholder="Descrição do Livro"></textarea>
+                    </div>
+                    <div class="file">
+                        <label for="imgLivro">Insira a capa do livro</label>
+                        <input type="file" name="imgLivro" id="imgLivro">
+                    </div>
+                </div>
+                <input type="submit" class="btnEnviar" value="Cadastrar">
+            </fieldset>
+        </form>
+    </header>
+
+
 <section class="corpo">
     <div class="boxTable">
-        <table class="tabela">
-            <caption>Catalogo de Livros</caption>
+        <table id="tabelaLivros" class="tabela">
+            <caption>Catálogo de Livros</caption>
             <thead>
                 <tr>
                     <th>Capa</th>
-                    <th>Titulo</th>
+                    <th>Título</th>
                     <th>Autor</th>
                     <th>Editora</th>
                     <th>Preço</th>
                     <th colspan="2">Ações</th>
                 </tr>
             </thead>
-            <tbody class="tbody">
-                <tr>
-                    <td><img src="img/livro1.jpg" alt=""></td>
-                    <td>Memórias póstumas de Brás Cubas</td>
-                    <td>Machado de Assis</td>
-                    <td>editora 1</td>
-                    <td>R$ 29,90</td>
-                    <td><button>Alterar</button></td>
-                    <td><button>Excluir</button></td>
-                </tr>
-                <tr>
-                    <td><img src="img/livro2.jpg" alt=""></td>
-                    <td>O Cortiço</td>
-                    <td>Aluísio Azevedo</td>
-                    <td>editora 2</td>
-                    <td>R$ 24,99</td>
-                    <td><button>Alterar</button></td>
-                    <td><button>Excluir</button></td>
-                </tr>
-                <tr>
-                    <td><img src="img/livro3.jpg" alt=""></td>
-                    <td>Dom Casmurro</td>
-                    <td>Machado de Assis</td>
-                    <td>editora 3</td>
-                    <td>R$ 19,99</td>
-                    <td><button>Alterar</button></td>
-                    <td><button>Excluir</button></td>
-                </tr>
+            <tbody id="corpoTabela" class="tbody">
+                <!-- Aqui serão inseridos os livros dinamicamente -->
             </tbody>
-            <tfoot class="tfoot">
-                <tr>
-                    <th colspan="7"><a href="cadLivro.html"><button>Adicionar Livro</button></a></th>
-                </tr>
-            </tfoot>
         </table>
     </div>
 </section>
-</body>
-</html>
+<script>
+    // Coloque seu JavaScript aqui
+    // Array para armazenar os livros
+    let livros = [];
+    
+    // Selecionando elementos do DOM
+    const formLivro = document.getElementById('formLivro');
+    const corpoTabela = document.getElementById('corpoTabela');
+    
+    // Função para atualizar a lista de livros exibida na tabela
+    function atualizarListaLivros() {
+        corpoTabela.innerHTML = ''; // Limpa o conteúdo da tabela
+    
+        livros.forEach((livro, index) => {
+            // Criação de uma nova linha na tabela para cada livro
+            const novaLinha = document.createElement('tr');
+            novaLinha.innerHTML = `
+                <td><img src="img/livro${index + 1}.jpg" alt="Capa do livro"></td>
+                <td>${livro.titulo}</td>
+                <td>${livro.autor}</td>
+                <td>${livro.editora}</td>
+                <td>R$ ${livro.preco.toFixed(2)}</td>
+                <td><button class="btnAlterar" onclick="alterarLivro(${index})">Alterar</button></td>
+                <td><button class="btnExcluir" onclick="excluirLivro(${index})">Excluir</button></td>
+            `;
+            corpoTabela.appendChild(novaLinha);
+        });
+    }
+    
+    // Função para adicionar um livro à lista
+    function adicionarLivro(event) {
+        event.preventDefault(); // Evita o envio do formulário
+    
+        // Obtendo os valores do formulário
+        const titulo = document.getElementById('titulo').value;
+        const autor = document.getElementById('autor').value;
+        const editora = document.getElementById('editora').value;
+        const preco = parseFloat(document.getElementById('preco').value);
+        const descricao = document.getElementById('descricao').value;
+    
+        // Criando objeto com os dados do livro
+        const livro = {
+            titulo: titulo,
+            autor: autor,
+            editora: editora,
+            preco: preco,
+            descricao: descricao
+        };
+    
+        // Adicionando o livro ao array
+        livros.push(livro);
+    
+        // Atualizando a lista de livros na tabela
+        atualizarListaLivros();
+    
+        // Limpando o formulário
+        formLivro.reset();
+    }
+    
+    // Função para excluir um livro
+    function excluirLivro(index) {
+        // Remove o livro do array pelo índice
+        livros.splice(index, 1);
+    
+        // Atualiza a lista de livros na tabela
+        atualizarListaLivros();
+    }
+    
+    // Event listener para o envio do formulário
+    formLivro.addEventListener('submit', adicionarLivro);
+    </script>
+    
+    </body>
+    </html>
