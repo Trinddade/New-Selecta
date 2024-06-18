@@ -303,7 +303,7 @@ legend {
 }
 
 .livro-details {
-    background-color: #fff;
+    background-color: #5a5555;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -355,7 +355,7 @@ legend {
     padding: 50px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #5a5555;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -681,7 +681,7 @@ body {
 /* Estilos para a seção de FAQ */
 .faq {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #5a5555;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto;
@@ -749,7 +749,7 @@ body {
     margin: 20px auto;
     max-width: 600px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #5a5555;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
