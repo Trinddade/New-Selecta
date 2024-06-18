@@ -27,6 +27,7 @@
             <p class="livro-sinopse">
                 "Terra sonâmbula é um romance do escritor moçambicano Mia Couto. O livro foi publicado, pela primeira vez, em 1992 e conta a história do menino Muidinga e do velho Tuahir, que, fugindo da guerra civil, acham abrigo em um machimbombo (um ônibus) abandonado em uma estrada."
             <p class="livro-preco">Preço: R$ 27,80</p>
+            <button class="read-text">Ouvir Texto</button>
             <ul class="avaliacao">
                 <li class="star-icon ativo" data-avaliacao="1"></li>
                 <li class="star-icon" data-avaliacao="2"></li>
@@ -53,6 +54,11 @@
             <button id="fontIncrease" class="font-control">A+</button>
             <button id="fontDecrease" class="font-control">A-</button>
         </div>
+        <div class="audio-player" id="audioPlayer">
+            <button id="playAudio" class="audio-control">Play</button>
+            <button id="pauseAudio" class="audio-control">Pause</button>
+            <button id="stopAudio" class="audio-control">Stop</button>
+        </div>
         <div class="comentarios" id="commentPost">
             <h1>Comentarios</h1>
         </div>
@@ -60,6 +66,7 @@
     <footer class="footer">
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/audio.js"></script>
     <script src="js/tamanho.js"></script>
     <script src="js/alternancia.js"></script>
     <script src="js/comentários.js"></script>

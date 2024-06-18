@@ -27,6 +27,7 @@
             <p class="livro-sinopse">
                 O romance mostra as mazelas e a vida miserável dos moradores de duas habitações coletivas. João Romão é ganancioso comerciante de origem portuguesa, dono de um terreno no Rio de Janeiro onde constrói moradias de baixo custo para obter renda.
             </p>
+            <button class="read-text">Ouvir Texto</button>
             <ul class="avaliacao">
                 <li class="star-icon ativo" data-avaliacao="1"></li>
                 <li class="star-icon" data-avaliacao="2"></li>
@@ -58,9 +59,15 @@
         <button id="fontIncrease" class="font-control">A+</button>
         <button id="fontDecrease" class="font-control">A-</button>
     </div>
+    <div class="audio-player" id="audioPlayer">
+        <button id="playAudio" class="audio-control">Play</button>
+        <button id="pauseAudio" class="audio-control">Pause</button>
+        <button id="stopAudio" class="audio-control">Stop</button>
+    </div>
     <footer class="footer">
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/audio.js"></script>
     <script src="js/tamanho.js"></script>
     <script src="js/alternancia.js"></script>
     <script src="js/comentários.js"></script>

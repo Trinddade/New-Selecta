@@ -27,6 +27,7 @@
             <p class="livro-sinopse">
                 A infância é o tempo de descobertas. É a fase da vida em que o ser humano recebe e retribui os sentimentos à sua volta com maior vigor e integridade. Com Miguilim, menino que protagoniza esta novela de João Guimarães Rosa, não é diferente. Contudo, a visão de mundo repleta de sensibilidade que vinca a personalidade da criança transforma o conjunto de situações que ela experimenta num redemoinho sem precedentes de sensações. Neste livro, tem-se o privilégio de captar o âmago da vida no sertão através do olhar de uma criança, uma escolha que revela a grandeza literária de Guimarães Rosa.
             </p>
+            <button class="read-text">Ouvir Texto</button>
             <ul class="avaliacao">
                 <li class="star-icon ativo" data-avaliacao="1"></li>
                 <li class="star-icon" data-avaliacao="2"></li>
@@ -58,9 +59,15 @@
         <button id="fontIncrease" class="font-control">A+</button>
         <button id="fontDecrease" class="font-control">A-</button>
     </div>
+    <div class="audio-player" id="audioPlayer">
+        <button id="playAudio" class="audio-control">Play</button>
+        <button id="pauseAudio" class="audio-control">Pause</button>
+        <button id="stopAudio" class="audio-control">Stop</button>
+    </div>
     <footer class="footer">
         <p>&copy; 2024 Livraria Selecta. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/audio.js"></script>
     <script src="js/tamanho.js"></script>
     <script src="js/alternancia.js"></script>
     <script src="js/comentários.js"></script>
