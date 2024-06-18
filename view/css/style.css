@@ -1258,3 +1258,65 @@ body {
 .dark-theme .livro-card button:hover {
     background-color: #009999;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 1em; /* Base font-size */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    background: #333;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#content {
+    padding: 2em;
+}
+
+h1, h2, h3, p, .quizz, .container, .card {
+    font-size: 1em; /* This will be adjusted dynamically */
+}
+
+
+/* Contêiner de controle de fonte */
+.font-control-container {
+    position: fixed;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.font-control {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.font-control:hover {
+    background: #333;
+    color: #fff;
+}
